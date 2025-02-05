@@ -154,11 +154,11 @@
 </head>
 <body>
     <section id="section1">
-        <h1>Bringing It All Together - Neural Networks in Action</h1>
-        <h2>Putting Theory into Practice</h2>
-        <div class="image-placeholder">
+<div class="image-placeholder">
             <img src="/placeholder.svg?height=300&width=600" alt="A compelling image of a neural network model successfully solving a real-world problem, such as a self-driving car navigating a complex scene or a medical AI accurately diagnosing a disease.">
         </div>
+        <h1>Bringing It All Together - Neural Networks in Action</h1>
+        
         <p>Welcome to the final lesson of this module! We've journeyed through the fascinating world of neural networks, from their biological inspiration to the powerful deep learning frameworks that make them accessible. Now, it's time to bring it all together and see how these concepts work in action.</p>
         <div class="continue-button" onclick="showNextSection(2)">Continue</div>
     </section>
@@ -182,13 +182,13 @@
             <p>\[ a = \phi(\sum_{i=1}^{m} w_i x_i + b) = \phi(z) \]</p>
             <p>Where:</p>
             <ul>
-                <li>$$ z $$ is the weighted sum of inputs plus bias.</li>
-                <li>$$ w_i $$ is the weight associated with the i-th input $$ x_i $$.</li>
-                <li>$$ b $$ is the bias term.</li>
-                <li>$$ \phi $$ is the activation function.</li>
-                <li>$$ a $$ is the output.</li>
+                <li>\( z \) is the weighted sum of inputs plus bias.</li>
+                <li>\( w_i \) is the weight associated with the i-th input \( x_i \).</li>
+                <li>\( b \) is the bias term.</li>
+                <li>\( \phi \) is the activation function.</li>
+                <li>\( a \) is the output.</li>
             </ul>
-            <p>If $$ \phi $$ is a linear function (e.g., $$ \phi(z) = z $$), then the perceptron is performing linear regression.</p>
+            <p>If \( \phi \) is a linear function (e.g., \( \phi(z) = z \)), then the perceptron is performing linear regression.</p>
         </div>
         <div class="continue-button" onclick="showNextSection(3)">Continue</div>
     </section>
@@ -201,13 +201,13 @@
             <p>\[ a_j^{(l)} = \phi(\sum_{i=1}^{m} w_{ji}^{(l)} * a_i^{(l-1)} + b_j^{(l)}) \]</p>
             <p>Where:</p>
             <ul>
-                <li>$$ a_j^{(l)} $$ is the activation of the j-th neuron in layer l.</li>
-                <li>$$ \phi $$ is the activation function.</li>
-                <li>$$ w_{ji}^{(l)} $$ is the weight connecting the i-th neuron in layer (l-1) to the j-th neuron in layer l.</li>
-                <li>$$ a_i^{(l-1)} $$ is the activation of the i-th neuron in layer (l-1).</li>
-                <li>$$ b_j^{(l)} $$ is the bias of the j-th neuron in layer l.</li>
+                <li>\( a_j^{(l)} \) is the activation of the j-th neuron in layer l.</li>
+                <li>\( \phi \) is the activation function.</li>
+                <li>\( w_{ji}^{(l)} \) is the weight connecting the i-th neuron in layer (l-1) to the j-th neuron in layer l.</li>
+                <li>\( a_i^{(l-1)} \) is the activation of the i-th neuron in layer (l-1).</li>
+                <li>\( b_j^{(l)} \) is the bias of the j-th neuron in layer l.</li>
             </ul>
-            <p><strong>Key Point:</strong> If $$ \phi $$ were a linear function, the entire network would collapse into a single linear model, no matter how many layers it has. The nonlinear activation functions are what give neural networks their power to learn complex patterns.</p>
+            <p><strong>Key Point:</strong> If \( \phi \) were a linear function, the entire network would collapse into a single linear model, no matter how many layers it has. The nonlinear activation functions are what give neural networks their power to learn complex patterns.</p>
         </div>
         <div class="why-it-matters">
             <h3>Why It Matters</h3>
@@ -216,44 +216,12 @@
         <div class="continue-button" onclick="showNextSection(4)">Continue</div>
     </section>
 
-    <section id="section4">
-        <h2>Test Your Understanding</h2>
-        <div class="test-your-knowledge">
-            <h3>Question 1</h3>
-            <h4>What is the difference between a perceptron and a regression function?</h4>
-            <div id="question1">
-                <button class="check-button" onclick="checkAnswer('question1', 1)">They are the same thing.</button>
-                <button class="check-button" onclick="checkAnswer('question1', 2)">A perceptron is similar to a regression function but includes a nonlinear activation function applied to the weighted sum of inputs plus bias.</button>
-                <button class="check-button" onclick="checkAnswer('question1', 3)">A perceptron only works with binary data, while a regression function can handle continuous data.</button>
-                <button class="check-button" onclick="checkAnswer('question1', 4)">A perceptron is a type of neural network, while a regression function is not.</button>
-            </div>
-            <p id="feedback1" style="display: none;"></p>
-        </div>
-        <div class="test-your-knowledge">
-            <h3>Question 2</h3>
-            <h4>Draw a neural network with 2 inputs, 2 layers with 4 nodes each, and 1 numerical output node. Add all components!</h4>
-            <p>Students should draw a diagram similar to the one in slide 10 of the original presentation, but with the specified architecture: 2 input nodes, 2 hidden layers with 4 nodes each, and 1 output node. They should label all inputs (x<sub>1</sub>, x<sub>2</sub>), weights (w<sub>ij</sub><sup>(l)</sup>), biases (b<sub>j</sub><sup>(l)</sup>), and activation functions (φ). They should also indicate the flow of information with arrows.</p>
-        </div>
-        <div class="test-your-knowledge">
-            <h3>Question 3</h3>
-            <h4>A neural network is built on single regression nodes. Why can a neural network learn nonlinear dependencies, as regression is only linear?</h4>
-            <div id="question3">
-                <button class="check-button" onclick="checkAnswer('question3', 1)">Neural networks can only learn linear dependencies.</button>
-                <button class="check-button" onclick="checkAnswer('question3', 2)">Neural networks can learn nonlinear dependencies because of the nonlinear activation functions applied at each neuron.</button>
-                <button class="check-button" onclick="checkAnswer('question3', 3)">The weights in a neural network are nonlinear.</button>
-                <button class="check-button" onclick="checkAnswer('question3', 4)">The biases in a neural network are nonlinear.</button>
-            </div>
-            <p id="feedback3" style="display: none;"></p>
-        </div>
-        <div class="continue-button" onclick="showNextSection(5)">Continue</div>
-    </section>
 
-    <section id="section5">
-        <h2>Review and Reflect</h2>
+    <section id="section4">
         <div class="image-placeholder">
             <img src="/placeholder.svg?height=300&width=600" alt="An inspiring image representing the future of AI, perhaps showing diverse people collaborating on innovative AI projects, symbolizing the potential of neural networks to solve real-world problems and improve lives.">
         </div>
-        <p>Congratulations! You've reached the end of this module on neural networks. We've covered a lot of ground, from the biological inspiration of the neuron to the practical tools used to build and train these powerful models. We've seen how neural networks can be used to solve complex problems by learning intricate patterns in data.</p>
+        <p>You've reached the end of this module on neural networks. We've covered a lot of ground, from the biological inspiration of the neuron to the practical tools used to build and train these powerful models. We've seen how neural networks can be used to solve complex problems by learning intricate patterns in data.</p>
         <p>I hope this journey has sparked your curiosity and inspired you to continue exploring the exciting field of artificial intelligence. Remember to keep practicing and experimenting – the world of AI is constantly evolving, and there's always more to learn!</p>
     </section>
 
